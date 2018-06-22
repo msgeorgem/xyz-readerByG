@@ -56,6 +56,7 @@ public class ArticleListAdapter extends CursorRecyclerViewAdapter<ArticleListAda
                 .load(cursor.getString(ArticleLoader.Query.THUMB_URL))
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .animate(R.anim.fade_in)
+                .centerCrop()
                 .listener(new RequestListener<String, GlideDrawable>() {
                     @Override
                     public boolean onException(Exception e, String model, Target<GlideDrawable> target, boolean isFirstResource) {
